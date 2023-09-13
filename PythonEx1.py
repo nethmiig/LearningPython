@@ -3,4 +3,5 @@
 print("Hello World")
 
 
-input("Enter something: ")
+userInput = input("Enter something: ")
+print(userInput)
