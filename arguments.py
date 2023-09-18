@@ -5,17 +5,18 @@ import sys
 
 #main function
 def main() -> int:
-    #login screen
-    print("")
-    username= input("Username: ")
-
+    
+    print(sys.argv)
+    print(sys.argv[1]+ print(sys.argv[2]))
+   
+    #casting to int
+    a= int(sys.argv[1])
+    b= int(sys.argv[2])
     #personal requests needs to be added here
     password=input("Password: ")
-    print(username,password)
-    #notes screen
-    print("1. some text")
-    print("2. ...")
-    input("Selection: ")
+    print (a+b)
+    print(a**b)
+    
 
 #return value
     return(0)
