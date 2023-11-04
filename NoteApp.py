@@ -1,4 +1,7 @@
 # notes.py - Simple notes application
+
+import datetime
+
 # In-memory data storage
 users = {"user1": "password1", "user2": "password2"}
 notes = {}  # Dictionary to store notes for each user
