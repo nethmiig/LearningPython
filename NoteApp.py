@@ -6,6 +6,13 @@ notes = {}  # Dictionary to store notes for each user
 
 # Function to create a note
 def create_note(username):
+    if username in notes:
+        notes[username].append(note)
+    else:
+        notes[username] = [note]
+    print("Note created successfully!")
+
+    # Main application loop
     while True:
         username = input("Enter your username: ")
         password = input("Enter your password: ")
@@ -19,5 +26,5 @@ def create_note(username):
                 print("3. Delete Notes")
                 print("4. Logout")
                 choice = input("Enter your choice: ")
-    else:
-        print("Invalid credentials. Please try again.")
+            else:
+                print("Invalid credentials. Please try again.")
