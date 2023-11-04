@@ -32,6 +32,19 @@ def retrieve_notes(username):
         choice = input("Enter the note number to view or 'q' to quit: ")
         if choice == "q":
             return
+        try:
+            choice = int(choice)
+            if 1 <= choice <= len(notes[username]):
+                selected_note = notes[username][choice - 1]
+                print(f"Date: {selected_note['date']}")
+                print(f"Subject: {selected_note['subject']}")
+                print("Note Text: ", selected_note["note_text"])
+                action = input("Do you want to delete this note? (y/n): ")
+                if action.lower() == "y":
+                    notes[username].pop(choice - 1)
+                    print("Note deleted successfully!")
+        except ValueError:
+            print("Invalid input. Please enter a valid note number.")
 
 
 # Main application loop
