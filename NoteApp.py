@@ -10,6 +10,7 @@ notes = {}  # Dictionary to store notes for each user
 # Function to create a note
 def create_note(username):
     date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
     if username in notes:
         notes[username].append(note)
     else:
