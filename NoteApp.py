@@ -66,6 +66,9 @@ while True:
                 create_note(username)
             elif choice == "2":
                 retrieve_notes(username)
+            elif choice == "3":
+                notes.pop(username)
+                print("All notes deleted.")
 
             elif choice == "4":
                 print("Logged out. Goodbye!")
