@@ -69,7 +69,7 @@ while True:
             elif choice == "2":
                 retrieve_notes(username)
             elif choice == "3":
-                notes.pop(username)
+                notes.pop(username, None)
                 print("All notes deleted.")
 
             elif choice == "4":
