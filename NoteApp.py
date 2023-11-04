@@ -45,6 +45,8 @@ def retrieve_notes(username):
                     print("Note deleted successfully!")
         except ValueError:
             print("Invalid input. Please enter a valid note number.")
+    else:
+        print("No notes found for this user.")
 
 
 # Main application loop
