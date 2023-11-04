@@ -57,3 +57,5 @@ while True:
             elif choice == "4":
                 print("Logged out. Goodbye!")
             break
+    else:
+        print("Invalid credentials. Please try again.")
