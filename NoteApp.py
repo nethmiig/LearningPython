@@ -16,3 +16,5 @@ while True:
             print("3. Delete Notes")
             print("4. Logout")
             choice = input("Enter your choice: ")
+ else:
+        print("Invalid credentials. Please try again.")
