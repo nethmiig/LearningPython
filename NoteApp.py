@@ -24,19 +24,36 @@ def create_note(username):
 
 
 def retrieve_notes(username):
-    # Main application loop
-    while True:
-        username = input("Enter your username: ")
-        password = input("Enter your password: ")
+    if username in notes:
+        print("Your notes:")
+        for idx, note in enumerate(notes[username]):
+            print(f"{idx + 1}. Date: {note['date']} - Subject: {note['subject']}")
 
-        if username in users and users[username] == password:
-            print(f"Welcome, {username}!")
-            while True:
-                print("\nOptions:")
-                print("1. Create Note")
-                print("2. Retrieve or Read Notes")
-                print("3. Delete Notes")
-                print("4. Logout")
-                choice = input("Enter your choice: ")
-            else:
-                print("Invalid credentials. Please try again.")
+        choice = input("Enter the note number to view or 'q' to quit: ")
+        if choice == "q":
+            return
+
+
+# Main application loop
+while True:
+    username = input("Enter your username: ")
+    password = input("Enter your password: ")
+
+    if username in users and users[username] == password:
+        print(f"Welcome, {username}!")
+        while True:
+            print("\nOptions:")
+            print("1. Create Note")
+            print("2. Retrieve Notes")
+            print("3. Delete Notes")
+            print("4. Logout")
+            choice = input("Enter your choice: ")
+
+            if choice == "1":
+                create_note(username)
+            elif choice == "2":
+                retrieve_notes(username)
+
+            elif choice == "4":
+                print("Logged out. Goodbye!")
+            break
