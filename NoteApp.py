@@ -59,9 +59,10 @@ while True:
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
     if username in users and users[username] == password:
-        print(f"Welcome, {username}!")
+        print("Welcome, {username}!")
+        print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
         while True:
-            print("\nOptions:")
+            print("\nCHOICES\n")
             print("1. Create Note")
             print("2. Retrieve Notes")
             print("3. Delete Notes")
