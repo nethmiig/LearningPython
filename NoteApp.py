@@ -59,14 +59,15 @@ while True:
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
     if username in users and users[username] == password:
-        print("Welcome, {username}!")
+        print(f"Welcome, {username}!")
         print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
         while True:
             print("\nCHOICES\n")
-            print("1. Create Note")
-            print("2. Retrieve Notes")
-            print("3. Delete Notes")
-            print("4. Logout")
+            print("1. CREATE")
+            print("2. RETRIEVE/DELETE")
+            print("3. DELETE ALL")
+            print("4. LOGOUT")
+
             choice = input("Enter your choice: ")
 
             if choice == "1":
