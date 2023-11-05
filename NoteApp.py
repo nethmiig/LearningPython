@@ -10,14 +10,14 @@ notes = {}  # Dictionary to store notes for each user
 # Function to create a note
 def create_note(username):
     date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    subject = input("Enter the subject: ")
-    note_text = input("Enter the note text: ")
+    subject = input("\nSUBJECT: ")
+    note_text = input("NOTE: \n")
     note = {"date": date, "subject": subject, "note_text": note_text}
     if username in notes:
         notes[username].append(note)
     else:
         notes[username] = [note]
-    print("Note created successfully!")
+    print("\nNOTE SAVED!\n")
 
 
 # Function to retrieve and display notes
@@ -42,7 +42,7 @@ def retrieve_notes(username):
                 action = input("Do you want to delete this note? (y/n): ")
                 if action.lower() == "y":
                     notes[username].pop(choice - 1)
-                    print("Note deleted successfully!")
+                    print("\nNOTE DELETED \n")
         except ValueError:
             print("Invalid input. Please enter a valid note number.")
     else:
@@ -54,9 +54,9 @@ while True:
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
     print("Login")
     print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-    username = input("Username: ")
+    username = input("\nUsername: ")
     password = input("Password: ")
-    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+    print("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
     if username in users and users[username] == password:
         print(f"Welcome, {username}!")
@@ -66,7 +66,7 @@ while True:
             print("1. CREATE")
             print("2. RETRIEVE/DELETE")
             print("3. DELETE ALL")
-            print("4. LOGOUT")
+            print("4. LOGOUT\n")
 
             choice = input("Enter your choice: ")
 
