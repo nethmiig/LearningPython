@@ -51,8 +51,12 @@ def retrieve_notes(username):
 
 # Main application loop
 while True:
-    username = input("Enter your username: ")
-    password = input("Enter your password: ")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    print("Login")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    username = input("Username: ")
+    password = input("Password: ")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 
     if username in users and users[username] == password:
         print(f"Welcome, {username}!")
